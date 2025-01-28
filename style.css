@@ -1,6 +1,9 @@
 body{
     background-color: blanchedalmond;
 }
-ul li{
+ul.key-components{
+    list-style-type: none;
+}
+ul.carbot-functionality{
     list-style-type: none;
 }

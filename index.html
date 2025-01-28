@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
             white background or vice versa. By continuously reading the sensor data, CarBot adjusts its wheels' motion
             to stay on the line.</p>
         <h3>Key Components</h3>
-        <ul>
+        <ul class="key-components">
             <li>Arduino Microcontroller: Acts as the "brain" of the robot, processing data and sending commands.</li>
             <li>Line-Following Sensors: Detect the line and send signals to the Arduino.</li>
             <li>Motor Driver: Controls the speed and direction of the wheels.</li>
@@ -31,7 +32,7 @@
             <li>Piezo Buzzer: Use as a sound signal.</li>
         </ul>
         <h3>Flowchart for CarBot Functionality</h3>
-        <ul>
+        <ul class="carbot-functionality">
             <li>Initialization: The Arduino initializes sensors and motor drivers.</li>
             <li>Sensor Reading: IR sensors detect whether they’re on the line or off.</li>
             <li>Decision-Making: Based on the sensor readings, the Arduino determines if the robot needs to turn left,
@@ -50,6 +51,61 @@
             </div>
             <div class="ultrasonic">
                 <h5>Ultrasonic Sensor Setup</h5>
+                <a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04/">Complete Guide
+                    for Ultrasonic Sensor HC-SR04 with Arduino by Randomnerd</a>
+                <p>
+                    /*
+                    * created by Rui Santos, https://randomnerdtutorials.com
+                    *
+                    * Complete Guide for Ultrasonic Sensor HC-SR04
+                    *
+                    Ultrasonic sensor Pins:
+                    VCC: +5VDC
+                    Trig : Trigger (INPUT) - Pin11
+                    Echo: Echo (OUTPUT) - Pin 12
+                    GND: GND
+                    */
+
+                    int trigPin = 11; // Trigger
+                    int echoPin = 12; // Echo
+                    long duration, cm, inches;
+
+                    void setup() {
+                    //Serial Port begin
+                    Serial.begin (9600);
+                    //Define inputs and outputs
+                    pinMode(trigPin, OUTPUT);
+                    pinMode(echoPin, INPUT);
+                    }
+
+                    void loop() {
+                    // The sensor is triggered by a HIGH pulse of 10 or more microseconds.
+                    // Give a short LOW pulse beforehand to ensure a clean HIGH pulse:
+                    digitalWrite(trigPin, LOW);
+                    delayMicroseconds(5);
+                    digitalWrite(trigPin, HIGH);
+                    delayMicroseconds(10);
+                    digitalWrite(trigPin, LOW);
+
+                    // Read the signal from the sensor: a HIGH pulse whose
+                    // duration is the time (in microseconds) from the sending
+                    // of the ping to the reception of its echo off of an object.
+                    pinMode(echoPin, INPUT);
+                    duration = pulseIn(echoPin, HIGH);
+
+                    // Convert the time into a distance
+                    cm = (duration/2) / 29.1; // Divide by 29.1 or multiply by 0.0343
+                    inches = (duration/2) / 74; // Divide by 74 or multiply by 0.0135
+
+                    Serial.print(inches);
+                    Serial.print("in, ");
+                    Serial.print(cm);
+                    Serial.print("cm");
+                    Serial.println();
+
+                    delay(250);
+                    }
+                </p>
             </div>
         </div>
     </div>
