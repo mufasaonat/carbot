@@ -43,11 +43,27 @@
         <div class="initial">
             <div class="motor">
                 <h5>Motor Setup</h5>
-                <p>int EnablerA = 10; // speed control<br>
-                    int MotorA = 12;<br>
-                    int EnablerB = 11; // speed control<br>
-                    int MotorB = 13;
-                </p>
+                <pre>
+                    int enablerA = 10; // speed control
+                    int motorA = 12;
+                    int enablerB = 11; // speed control
+                    int motorB = 13;
+
+                    void setup(){
+                        pinMode(enablerA,OUTPUT);
+                        pinMode(motorA,OUTPUT);
+                        pinMode(enablerB,OUTPUT);
+                        pinMode(motorB,OUTPUT);
+                    }
+                    
+                    void loop() {
+                        digitalWrite(motorA,HIGH);
+                        analogWrite(enablerA,255);
+                        digitalWrite(motorB,HIGH);
+                        analogWrite(enablerB,255);
+                    }
+                    
+                </pre>
                 <p>
                     <img src="img/L298P-Motor-Driver-Shield-Back-150x150.jpg" alt="">
                 </p>
