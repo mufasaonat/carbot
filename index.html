@@ -12,33 +12,40 @@
 
 <body>
     <div class="container">
-        <h1>CarBot: A Smart Line-Following Robot</h1>
-        <h3>Overview</h3>
-        <p>CarBot is an intelligent robot designed to follow a line or path autonomously using sensors and actuators.
-            It’s an excellent project for students learning robotics, Arduino programming, and sensor integration. The
-            CarBot introduces foundational concepts in robotics such as sensor input, decision-making, and motor control
-        </p>
+        <div class="heading">
+            <h1>CarBot: A Smart Line-Following Robot</h1>
+            <h3>Overview</h3>
+            <p>CarBot is an intelligent robot designed to follow a line or path autonomously using sensors and
+                actuators. It’s an excellent project for students learning robotics, Arduino programming, and sensor
+                integration. The CarBot introduces foundational concepts in robotics such as sensor input,
+                decision-making, and motor control
+            </p>
 
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/NeLWEcG3wyI?si=L3iji8lvRgI07HsL"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NeLWEcG3wyI?si=L3iji8lvRgI07HsL"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
-
-        <h3>How it works</h3>
-        <p>CarBot primarily uses line-following sensors to detect a line on the surface, often marked in black on a
-            white background or vice versa. By continuously reading the sensor data, CarBot adjusts its wheels' motion
-            to stay on the line.</p>
-        <h3>Key Components</h3>
-        <ul class="key-components">
-            <li>Arduino Microcontroller: Acts as the "brain" of the robot, processing data and sending commands.</li>
-            <li>Line-Following Sensors: Detect the line and send signals to the Arduino.</li>
-            <li>Motor Driver: Controls the speed and direction of the wheels.</li>
-            <li>Wheels and Chassis: The physical components that move and carry the robot.</li>
-            <li>Ultrasonic sensor: Detects the distance of an object</li>
-            <li>Piezo Buzzer: Use as a sound signal.</li>
-        </ul>
+        <div class="how-it-works">
+            <h3>How it works</h3>
+            <p>CarBot primarily uses line-following sensors to detect a line on the surface, often marked in black on a
+                white background or vice versa. By continuously reading the sensor data, CarBot adjusts its wheels'
+                motion to stay on the line.</p>
+        </div>
+        <div class="key-components">
+            <h3>Key Components</h3>
+            <ul class="key-components">
+                <li>Arduino Microcontroller: Acts as the "brain" of the robot, processing data and sending commands.
+                </li>
+                <li>Line-Following Sensors: Detect the line and send signals to the Arduino.</li>
+                <li>Motor Driver: Controls the speed and direction of the wheels.</li>
+                <li>Wheels and Chassis: The physical components that move and carry the robot.</li>
+                <li>Ultrasonic sensor: Detects the distance of an object</li>
+                <li>Piezo Buzzer: Use as a sound signal.</li>
+            </ul>
+        </div>
         <div class="materials">
             <h3>Materials Needed</h3>
             <table>
@@ -78,7 +85,7 @@
                 </tbody>
             </table>
         </div>
-
+        <div class="functionality">
         <h3>Flowchart for CarBot Functionality</h3>
         <ul class="carbot-functionality">
             <li>Initialization: The Arduino initializes sensors and motor drivers.</li>
@@ -88,6 +95,7 @@
             <li>Motor Control: The Arduino sends commands to the motor driver to adjust wheel speed or direction.</li>
             <li>Repeat: The process loops continuously, allowing the CarBot to follow the line.</li>
         </ul>
+        </div>
         <div class="initial">
             <div class="motor">
                 <h5>Motor Setup</h5>
@@ -110,7 +118,6 @@
                         digitalWrite(motorB,HIGH);
                         analogWrite(enablerB,255);
                     }
-                    
                 </pre>
                 <p>
                     <img src="img/L298P-Motor-Driver-Shield-Back-150x150.jpg" alt="">
