@@ -7,3 +7,17 @@ ul.key-components{
 ul.carbot-functionality{
     list-style-type: none;
 }
+.video {
+    text-align: center;
+}
+
+.video iframe {
+    display: inline-block;
+}
+.materials img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Keeps the aspect ratio */
+}
+table tr td{
+    border: 1px solid blue;
+}

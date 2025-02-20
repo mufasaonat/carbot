@@ -18,11 +18,14 @@
             It’s an excellent project for students learning robotics, Arduino programming, and sensor integration. The
             CarBot introduces foundational concepts in robotics such as sensor input, decision-making, and motor control
         </p>
-        <p>
-            <div class="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/NeLWEcG3wyI?si=L3iji8lvRgI07HsL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </p>
+
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NeLWEcG3wyI?si=L3iji8lvRgI07HsL"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
         <h3>How it works</h3>
         <p>CarBot primarily uses line-following sensors to detect a line on the surface, often marked in black on a
             white background or vice versa. By continuously reading the sensor data, CarBot adjusts its wheels' motion
@@ -36,6 +39,46 @@
             <li>Ultrasonic sensor: Detects the distance of an object</li>
             <li>Piezo Buzzer: Use as a sound signal.</li>
         </ul>
+        <div class="materials">
+            <h3>Materials Needed</h3>
+            <table>
+                <tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Required Materials</th>
+                            <th scope="col">No. of Pieces</th>
+                            <th scope="col">Images</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Microcontroller Mega 2560</td>
+                        <td>1</td>
+                        <td><img src="/img/mega2560.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Data Cable</td>
+                        <td>1</td>
+                        <td><img src="/img/datacable-removebg-preview.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>L298P Motor Shield</td>
+                        <td>1</td>
+                        <td><img src="/img/l298p-removebg-preview.png" alt=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Infrared Sensor</td>
+                        <td>5</td>
+                        <td><img src="/img/SN-IRLINE-MOD__2_-800x800-removebg-preview.png" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <h3>Flowchart for CarBot Functionality</h3>
         <ul class="carbot-functionality">
             <li>Initialization: The Arduino initializes sensors and motor drivers.</li>
@@ -207,8 +250,11 @@
                         <li> DC motor control = D10,D11, D12, D13</li>
                         <li> Buzzer = D4</li>
                         <li>Bluetooth</li>
-                        <p>There are two Bluetooth connectors on the board. The first connector is a 4-pin header that brings out 3.3V power, ground, TX and RX. This type of connector is compatible with HC05 or HC06</p>
-                        Bluetooth modules and perhaps some others. The Receive pin has a 1K/2K voltage divider to level shift the TX output of the Arduino to be 3.3V compatible which is a nice feature.
+                        <p>There are two Bluetooth connectors on the board. The first connector is a 4-pin header that
+                            brings out 3.3V power, ground, TX and RX. This type of connector is compatible with HC05 or
+                            HC06</p>
+                        Bluetooth modules and perhaps some others. The Receive pin has a 1K/2K voltage divider to level
+                        shift the TX output of the Arduino to be 3.3V compatible which is a nice feature.
                         </li>
                     </ul <p>
                     </p>
